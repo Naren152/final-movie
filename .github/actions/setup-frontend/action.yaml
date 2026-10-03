@@ -1,0 +1,32 @@
+name: 'Setup Frontend Environment'
+description: 'Sets up NodeJS, restores npm cache, and installs dependencies'
+inputs:
+  node-version:
+    description: 'NodeJS version to install'
+    required: false
+    default: '18.x'
+  working-directory:
+    description: 'Working directory for frontend code'
+    required: false
+    default: 'starter/frontend'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Setup NodeJS
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ inputs.node-version }}
+
+    - name: Perform cache action to restore cache before dependency install
+      uses: actions/cache@v4
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles(format('{0}/package-lock.json', inputs.working-directory)) }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+
+    - name: Install dependencies
+      shell: bash
+      working-directory: ${{ inputs.working-directory }}
+      run: npm ci
