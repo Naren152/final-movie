@@ -6,8 +6,6 @@ on:
       - main
     paths:
       - 'starter/frontend/**'
-      - '.github/workflows/frontend-ci.yaml'
-      - '.github/actions/setup-frontend/**'
   workflow_dispatch:
 
 defaults:

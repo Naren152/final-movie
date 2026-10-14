@@ -6,8 +6,6 @@ on:
       - main
     paths:
       - 'starter/backend/**'
-      - '.github/workflows/backend-ci.yaml'
-      - '.github/actions/setup-backend/**'
   workflow_dispatch:
 
 defaults:
