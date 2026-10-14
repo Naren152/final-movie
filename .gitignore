@@ -13,3 +13,11 @@ build/
 eks-describe.json
 smoke-source.json
 codebuild-trust.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.venv/
+

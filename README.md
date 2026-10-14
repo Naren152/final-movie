@@ -1,5 +1,8 @@
 # Movie Picture Pipeline
 
+> 🚀 **Project Submission & Reviewer Verification Guide**:  
+> For full deployment evidence, links to successful GitHub Actions runs for all 4 workflows, Port 80 LoadBalancer verification, and live screenshots, please consult [**PROJECT_SUBMISSION_GUIDE.md**](./PROJECT_SUBMISSION_GUIDE.md).
+
 You've been brought on as the DevOps resource for a development team that manages a web application that is a catalog of Movie Picture movies. They're in dire need of automating their development workflows in hopes of accelerating their release cycle. They'd like to use Github Actions to automate testing, building and deploying their applications to an existing Kubernetes cluster.
 
 The team's project is comprised of 2 application.
